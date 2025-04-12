@@ -2,12 +2,11 @@
 
 ## 📌 Project Overview
 
-**Project Title**: Retail Sales Analysis – Business Insight Edition   
-**Level**: Beginner
-**Tools**: PostgreSQL, SQL    
-**Dataset**: Retail transaction data from Zero Analyst
+**Project Title**: Retail Sales Analysis – Business Insight Edition
+**Tools**: PostgreSQL, SQL  
+**Dataset**: Retail transaction data (originally sourced from Zero Analyst)
 
-This project showcases how to explore and analyze retail sales data using SQL from a business perspective. The focus is not hanya on writing queries, but also on deriving meaningful **insight and recommendations** that can help decision makers in areas such as **sales strategy, customer segmentation, and product prioritization**.
+This project demonstrates how SQL can be used to explore and analyze retail sales data from a business-oriented perspective. The analysis is structured into three main aspects: **Time-Based Analysis**, **Product-Based Analysis**, and **Customer-Based Analysis**. The goal is not only to write queries, but also to extract actionable **insights** and develop relevant **recommendations** that support decision-making in retail strategy, customer segmentation, and product prioritization.
 
 ---
 
