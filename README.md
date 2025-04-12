@@ -260,7 +260,7 @@ ORDER BY gender, total_quantity DESC;
 
 ---
 
-##🧾 Conclusion
+## 🧾 Conclusion
 
 This project highlights how SQL can be applied to derive meaningful insights from retail data even without visualizations. By segmenting the analysis into time, product, and customer dimensions, we can uncover sales trends, customer behavior, and category performance that drive strategic decision-making. This structured approach allows analysts to focus on extracting actionable recommendations purely from data-driven evidence.
 
