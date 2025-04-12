@@ -270,7 +270,7 @@ This project highlights how SQL can be applied to derive meaningful insights fro
 ## 👤 Author
 
 **Name**: Muhammad Rafi'Ar Rasyid  
-**LinkedIn**: [Linkedin](https://www.linkedin.com/in/muhammadrafiarrasyid/)
+**LinkedIn**: [Connect with Me Professionally](https://www.linkedin.com/in/muhammadrafiarrasyid/)
 
 ---
 
