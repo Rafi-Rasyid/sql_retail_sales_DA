@@ -75,6 +75,7 @@ WHERE
 The SQL queries used to analyze the dataset and extract business insights are organized by theme:
 
 **Time-Based Analysis**:
+
 Q1.1 – What is the trend of total sales by month and year?
 ```sql
 SELECT EXTRACT(YEAR FROM sale_date) AS year, EXTRACT(MONTH FROM sale_date) AS month, SUM(total_sale) AS total_sales
@@ -110,6 +111,7 @@ ORDER BY avg_sales DESC;
 ```
 
 **Product-Based Analysis**:
+
 Q2.1 – Which category has the highest number of products sold?
 ```sql
 SELECT category, SUM(quantiy) AS total_quantity
@@ -161,6 +163,7 @@ ORDER BY category, month;
 ```
 
 **Customer-Based Analysis**:
+
 Q3.1 – Who are the top spending customers?
 ```sql
 SELECT customer_id, SUM(total_sale) AS total_sales
