@@ -21,25 +21,25 @@ This project demonstrates how SQL can be used to explore and analyze retail sale
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `retail_`.
-- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+- **Database Creation**: The project starts by creating a database named `retail_sales`.
+- **Schema Creation** : Followed by creating a scheme named `rtl_sales`.
+- **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction_ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
-CREATE DATABASE p1_retail_db;
-
-CREATE TABLE retail_sales
-(
-    transactions_id INT PRIMARY KEY,
-    sale_date DATE,	
-    sale_time TIME,
-    customer_id INT,	
-    gender VARCHAR(10),
-    age INT,
-    category VARCHAR(35),
-    quantity INT,
-    price_per_unit FLOAT,	
-    cogs FLOAT,
-    total_sale FLOAT
+CREATE DATABASE retail_sales;
+CREATE SCHEMA rtl_sales;
+CREATE TABLE retail_sales (
+		transactions_id	INT PRIMARY KEY,
+		sale_date DATE,
+		sale_time TIME,	
+		customer_id	INT,
+		gender VARCHAR(10),
+		age	INT,
+		category VARCHAR(20),	
+		quantiy	INT,
+		price_per_unit FLOAT,	
+		cogs FLOAT,	
+		total_sale INT
 );
 ```
 
@@ -51,21 +51,23 @@ CREATE TABLE retail_sales
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
 
 ```sql
-SELECT COUNT(*) FROM retail_sales;
-SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-SELECT DISTINCT category FROM retail_sales;
+SELECT COUNT(*) FROM rtl_sales.retail_sales;
+SELECT COUNT(DISTINCT customer_id) FROM rtl_sales.retail_sales;
+SELECT DISTINCT category FROM rtl_sales.retail_sales;
 
-SELECT * FROM retail_sales
+SELECT * FROM rtl_sales.retail_sales
 WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+    transactions_id IS NULL OR sale_date IS NULL
+    OR sale_time IS NULL OR gender IS NULL
+    OR category IS NULL OR quantiy IS NULL
+    OR cogs IS NULL OR total_sale IS NULL;
 
-DELETE FROM retail_sales
+DELETE FROM rtl_sales.retail_sales
 WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+    transactions_id IS NULL OR sale_date IS NULL
+    OR sale_time IS NULL OR gender IS NULL
+    OR category IS NULL OR quantiy IS NULL
+    OR cogs IS NULL OR total_sale IS NULL;
 ```
 
 ### 3. Data Analysis & Findings
@@ -193,11 +195,11 @@ ORDER BY gender, total_quantity DESC;
 
 | Area        | Insight                                                                 | Recommendation                                                  |
 |-------------|-------------------------------------------------------------------------|------------------------------------------------------------------|
-| Time        | Peak sales in Q4, lowest in Q1                                          | Prioritize promotions in Q4, evaluate early-year strategies      |
-| Product     | Electronics lead in revenue and consistency                             | Focus bundling & loyalty efforts on Electronics                 |
-| Customer    | High-spending & loyal customers identified                              | Offer exclusive vouchers or early-access promos                 |
-| Gender      | Women favor Clothing, Men favor Electronics                             | Design gender-targeted marketing campaigns                      |
-| Time of Day | Most transactions happen Mon evenings                                   | Schedule flash sales or promo campaigns during this time frame  |
+| Time        | Peak sales in Q4, lowest in Q1                                          | **Prioritize promotions in Q4**, evaluate early-year strategies      |
+| Product     | **Electronics lead** in revenue and consistency                             | Focus bundling & loyalty efforts on **Electronics**                 |
+| Customer    | High-spending & loyal customers identified                              | Offer **exclusive vouchers** or **early-access promos**                 |
+| Gender      | Women favor **Clothing**, Men favor **Electronics**                             | Design **gender-targeted marketing** campaigns                      |
+| Time of Day | Most transactions happen **Monday evenings**                                   | Schedule **flash sales** or **promo campaigns** during this time frame  |
 
 ---
 
